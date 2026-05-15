@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"myPacakge/mathlib"
+)
 
 func sum(a int, b int) int {
 	sum := a + b
@@ -80,11 +83,14 @@ func main() {
 
 	// fmt.Println("Name:", name)
 
-	name := getUserName()
+	// name := getUserName()
 	num1, num2 := getTwoNumbers()
 
-	sum := sum(num1, num2)
-	displayResult(name, sum)
-	printGoodbyeMessage()
+	// sum := sum(num1, num2)
+	// displayResult(name, sum)
+	// printGoodbyeMessage()
+
+	sum := mathlib.Summation(num1, num2)
+	fmt.Println("Sum:", sum)
 
 }
