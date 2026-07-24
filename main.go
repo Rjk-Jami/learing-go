@@ -2,95 +2,39 @@ package main
 
 import (
 	"fmt"
-	"myPacakge/mathlib"
 )
 
-func sum(a int, b int) int {
-	sum := a + b
-	fmt.Println(sum)
-	return sum
-}
-
-func getNumbers(num1 int, num2 int) (int, int) {
-	sum := num1 + num2
-	mul := num1 * num2
-	return sum, mul
-}
-
-func printWecomeMessage() {
-	fmt.Println("welcome to the application ")
-}
-
-func getUserName() string {
-	var name string
-	fmt.Printf("Enter your name: ")
-	fmt.Scanln(&name)
-	return name
-}
-
-func getTwoNumbers() (int, int) {
-	var num1, num2 int
-	fmt.Printf("Enter your 1st number: ")
-	fmt.Scanln(&num1)
-	fmt.Printf("Enter your 2nd number: ")
-	fmt.Scanln(&num2)
-	return num1, num2
-}
-
-func displayResult(name string, sum int) {
-	fmt.Println("Name:", name)
-	fmt.Println("Sum:", sum)
-}
-
-func printGoodbyeMessage() {
-	fmt.Println("Thank you! for the using our application")
-}
+var a = 10
 
 func main() {
-	// fmt.Println("Hello, Welcome to Go Programming ")
-	// var car string = "BMW"
-	// fmt.Println(car)
+	fmt.Println("Hello World")
+	// age := 30
+	// if age > 18 {
+	// 	a := 47
+	// 	fmt.Println(a)
+	// }
 
-	// a := 10
+	fmt.Println(a)
 
-	// b := "20"
+	// Anonymous function
+	// Immediately invoked function expression (IIFE)
 
-	// a = 2.2
+	// func(b int, c int) {
+	// 	fmt.Println(b + c)
+	// }(2, 3)
 
-	// name := 30
-	// fmt.Println(name)
-	// fmt.Println(b)
-	// fmt.Println(a)
+	// variadic function
+	add := func(b int, c int) {
+		fmt.Println(b + c)
+	}
+	add(2, a)
 
-	// sum(10, 20)
+}
 
-	// add := sum(10, 20)
-	// fmt.Println("sum:", add)
+// inti function
 
-	// a := 10
-	// b := 20
-
-	// p, q := getNumbers(a, b)
-
-	// fmt.Println("sum:", p)
-	// fmt.Println("mul:", q)
-
-	// fmt.Println("welcome to the application ")
-
-	// var name string
-	// fmt.Printf("Enter your name: ")
-	// fmt.Scanln(&name)
-
-	// fmt.Println("Name:", name)
-
-	// name := getUserName()
-	num1, num2 := getTwoNumbers()
-
-	// sum := sum(num1, num2)
-	// displayResult(name, sum)
-	// printGoodbyeMessage()
-
-	sum := mathlib.Summation(num1, num2)
-	fmt.Println("Sum:", sum)
-
+func init() {
+	fmt.Println("init")
+	fmt.Println(a)
+	// a = 20
 }
